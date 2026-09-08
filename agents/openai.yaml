@@ -1,0 +1,6 @@
+interface:
+  display_name: "亚马逊页面优化"
+  short_description: "选标题 / Highlight / 五点 / 图片 / A+ / 属性，确认一次后按 7 阶段多智能体流程出成品"
+  default_prompt: "请使用 $amazon-listing-catalog-workflow 启动亚马逊页面优化。产品链接：[链接]。先识别产品并给我 4 个套餐选，我回数字后开始。只做内部方案，不改后台。"
+policy:
+  allow_implicit_invocation: true
