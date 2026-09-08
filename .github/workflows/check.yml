@@ -1,9 +1,9 @@
-name: Complete skill distribution
+name: Skill package check
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
-  verify:
+  package:
     runs-on: ubuntu-latest
     env:
       PYTHONDONTWRITEBYTECODE: "1"
@@ -11,16 +11,21 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-      - name: Check complete source and dependency references
-        run: python scripts/check_package.py
-      - name: Installation and failure recovery tests
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python scripts/check_package.py
+      - run: python scripts/check_release.py
+      - name: Installation, overwrite protection and recovery
         run: python -B -m unittest discover -s tests -v
-      - name: Existing Listing contract tests
+      - name: Listing contract regression
         run: python -B -m unittest discover -s skills/amazon-listing-publish-gate/tools/listing/scripts -q
-      - name: Existing A+ contract tests
+      - name: A+ contract regression
         run: python -B -m unittest discover -s skills/amazon-listing-publish-gate/tools/aplus/scripts -q
-      - name: Install outside the checkout and verify
+      - name: Fresh install outside the checkout
         run: |
           python scripts/install.py --dest "$RUNNER_TEMP/amazon-skills"
           python scripts/check_package.py --installed-root "$RUNNER_TEMP/amazon-skills"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amazon-skills-complete
+          path: dist/*

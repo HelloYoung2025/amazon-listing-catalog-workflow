@@ -17,7 +17,10 @@
 因此单做部分 Listing 创作可以开始，但 A+ 和正式校验无法按文档完整继续。
 这是**发布范围遗漏依赖**，不是 GitHub 传输丢文件。
 
-本次补齐依赖并改为标准多 Skill 目录；原三套 Skill 内容保持与发布时的本地安装源逐字节一致。
+本次补齐依赖并改为标准多 Skill 目录；A+ 与发布校验器的工作流、脚本和模板保持原样，
+仅缩短 A+ 的界面简介以满足 25–64 字符的元数据要求，其余 79 个配套文件与本地源逐字节一致。
+主入口保留后续提交 `85e0280` 的环境降级、缺依赖提示、当前规则核对与工作稿模板修复，
+仅将“未随包分发”的说明更新为本次完整套件。没有重写产品营销流程。
 旧的“把整个仓库直接 clone 到某一个 Skill 目录”安装方法已废止，请用下方完整安装。
 此仓库是公开仓库，下载不要求 GitHub 登录或私有仓库权限。
 
@@ -33,6 +36,18 @@
 ```
 
 安装完成后，下一轮即可调用。若当前客户端尚未刷新 Skill 列表，打开一个新任务再试。
+
+## 不用终端：下载完整安装 ZIP
+
+从 [最新 Release](https://github.com/HelloYoung2025/amazon-listing-catalog-workflow/releases/latest)
+下载 **amazon-skills-complete.zip**。解压后有上表三个目录，将三个目录一起放进客户端支持的 Skill 根目录。
+每个目录下应直接存在 SKILL.md，不要多套一层同名目录；已有同名目录时先移出备份，不要直接合并覆盖。
+完整包不需要 Python/PyYAML 才能读取 Skill；正式 Bundle 的 Python 校验脚本需要 Python 3.10+。
+
+Release 的三个单独 Skill ZIP 仅供定向补装，单独下载主入口 ZIP 不代表完整安装。
+GitHub “Code → Download ZIP” 是源码包，不是这个三目录安装包。
+目前验证的是 Codex 安装器、脚本安装和 ZIP 解压结构，未宣称测试了所有客户端的 UI 导入。
+普通聊天框上传 ZIP 不等于 Skill 注册；其他工具须使用其实际支持的导入方式。
 
 ## 终端安装（Python 3.10+、Git）
 
@@ -113,6 +128,11 @@ python3 -B -m unittest discover -s skills/amazon-listing-publish-gate/tools/aplu
 原有 Listing 149 项 + A+ 144 项测试检查本地契约；新增测试检查缺依赖、文件损坏、完整安装、覆盖保护和恢复。
 GitHub Actions 对仓库内容与一次干净安装执行检查。清单是完整性基线，不是第三方签名或商品事实证明。
 维护者改动 Skill 时需从经核验的完整源同步清单，并再次执行测试，不能为使检查变绿而删掉缺失项。
+
+维护者生成 Release ZIP：先在隔离虚拟环境安装 `requirements-dev.txt`，再运行
+`python scripts/check_release.py`。脚本校验三套 Skill 的 YAML、资源、工作稿模板、ZIP 解压后的逐文件一致性，
+产出完整 ZIP、三个独立 ZIP 和 SHA256SUMS。发布后必须重新下载校验，不能只看本地打包成功。
+早期单 Skill 发布的复现与修复记录见 [PUBLISHING.md](PUBLISHING.md)；当前安装以本 README 为准。
 
 ## 数据与权限边界
 

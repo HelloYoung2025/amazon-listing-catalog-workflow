@@ -50,6 +50,8 @@
 
 ## 路由
 
+先按 SKILL.md 的“首次运行与可选依赖”检查技能是否可用。下面的外部交接只在对应技能已安装并可读取时执行。规划器缺失时 E 只产出 A+ 交接简报，发布校验器缺失时明确正式校验不可用；两者均不阻塞 A/B/C/D/F 的内部工作。
+
 - 只选 A/B/C/D/F：本 Skill 拥有全部工作。未选字段只读作上下文，发现重大冲突时报告依赖与建议追加任务，不静默修复。
 - 只选 E：直接进 `$amazon-premium-aplus-planner`，带上已接受的卡。有本 Skill 的定稿交接简报（意图简报 + 胜出方向 + 台账）就是 embedded；没有就是 standalone（A+ 规划器自己复用本 Skill 的预研与第一轮提问）。A+ 不得把用户送回本菜单再确认一次。用户要求接着上次的 Listing 做但交接文件缺失/过期/不匹配 → 说出来并核对，不静默改 standalone。
 - E + Listing 字段：本 Skill 是事实、访谈、购买理由与输出的唯一主导。阶段 7 定稿后把交接简报给 A+ 规划器（embedded）。正式的 Handoff v1.1 / FROZEN 状态只在进 `$amazon-listing-publish-gate` 做 Bundle 时才出现，工作稿阶段不需要。

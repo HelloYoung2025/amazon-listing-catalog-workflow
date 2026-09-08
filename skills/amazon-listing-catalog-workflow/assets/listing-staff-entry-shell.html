@@ -23,28 +23,15 @@
   <a class="skip" href="#report">跳到报告正文</a>
   <header>
     <h1>{{TITLE}}</h1>
-    <p>只读、由已验证Bundle确定性生成。JSON Bundle是唯一事实源；本页无编辑、保存、导入、导出或线上提交功能。</p>
+    <p>内部只读优化稿。事实、待核实主张与适用范围见正文；本页不代表后台发布或正式校验通过。</p>
     <div class="meta">{{META}}</div>
   </header>
   <main id="report">
     <section class="banner {{BANNER_CLASS}}" aria-label="验证结论"><strong>{{BANNER_TITLE}}</strong><p>{{BANNER_BODY}}</p></section>
     <div class="grid">
-      <article class="card receipt-flow" aria-labelledby="coordination-receipt-title">
-        <h2 id="coordination-receipt-title">跨 Bundle 协调回执 Ledger（本地，只读）</h2>
-        <p><strong>本报告中的 coordination ledger 值：</strong><code>{{COORDINATION_RECEIPT_VALUE}}</code>。不得从 Bundle、<code>COMPONENT_PASS</code>、人工 Gate 或页面颜色推断 ledger head、receipt 或终态。</p>
-        <ol>
-          <li><strong>纯检查 / 无 Ledger：</strong>纯 coordinator 最高只形成 <code>PASS_CANDIDATE</code>；无受控 ledger 的 CLI 不会确认终态 PASS。<code>--receipt-ledger &lt;path&gt;</code>仅读取当前 head；只有同时显式使用<code>--record-receipt</code>，才以锁、append 和 fsync 向本地 JSONL ledger 追加一条有效 receipt。</li>
-          <li><strong>正常链：</strong><code>FROZEN + COMPONENT_PASS</code> → 用<code>--receipt-ledger &lt;path&gt; --record-receipt</code>将<code>AWAITING_RESULT_ACK</code>写为当前 head → Parent 仅推进到<code>RESULT_RECEIVED</code> → coordinator 用同一<code>--receipt-ledger &lt;path&gt;</code>读取 current head，并再次显式使用<code>--record-receipt</code>写入与之相链的终态 PASS receipt。</li>
-          <li><strong>DELTA / refreeze 链：</strong><code>RECONCILIATION_REQUIRED + DELTA_REQUIRED</code>把 DELTA 写为新 head，旧 AWAIT 不可回放 → 旧 Snapshot <code>SUPERSEDED</code> → <code>semantic_revision + 1</code> → 新 <code>FROZEN</code> → 把新 AWAIT 写为 current head → 新<code>RESULT_RECEIVED</code>再消费该 current head。</li>
-          <li><strong>多 Locale：</strong>Group manifest 只读确认；每个 member 必须绑定自己的 JSONL ledger，且其 current head 已是精确绑定该 Parent、A+ 与 bundled validators 的终态 PASS receipt。</li>
-          <li><strong>本 HTML 的边界：</strong>本页不创建、保存、编辑或追加 ledger；请查看 package coordinator 的 JSON 输出及指定 JSONL ledger。Receipt 不写入 Listing Bundle。</li>
-        </ol>
-        <p><strong>本地证据写入：</strong>ledger 是可审计的本地流程证据；<code>--record-receipt</code>是显式 local evidence write，不是 Amazon、Seller Central、ERP、网络或其他外部写入。</p>
-        <p><strong>与 Amazon backend/readback receipt 严格区分：</strong>coordination ledger/receipt 不是数字签名、不是可信时间戳、不是 Fact/Claim 或证据真实性证明、不是 Amazon 后台/平台回执、不是发布授权、不是 LIVE_MATCH/LIVE_PASS 证明。若对手可替换整个 ledger、Skill 或 validator，仍需外部可信存储或签名。</p>
-      </article>
       {{CONTENT}}
     </div>
   </main>
-  <footer>Bundle SHA256：<code>{{BUNDLE_SHA}}</code> · Validator PASS不证明事实真实、规则当前、已获写权限或Amazon前台上线。</footer>
+  <footer>内部方案 · 平台规则以任务当日核实结果为准 · 未执行 Amazon 或 ERP 写入。</footer>
 </body>
 </html>

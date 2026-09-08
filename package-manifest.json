@@ -2,21 +2,21 @@
   "release": "2026-09-08-complete",
   "skills": {
     "amazon-listing-catalog-workflow": {
-      "SKILL.md": "221983de34832d6b758ae01f6f94a8933f9205fb2769913ed0522a128bdcd070",
+      "SKILL.md": "cd028b0cb9f74293a9658f51c0f4ab6ae77e28481e9078e7f524f7b6eb797440",
       "agents/openai.yaml": "e8361e4bf09b3ab5cd61c952eedcbcc846bcee5d954736c2ae0a90e3d7f3668f",
-      "assets/listing-staff-entry-shell.html": "9d668c782fb6372a2d2d84b73b02fed7d49c867f95b15873c1f0fcf4fea6b191",
-      "references/00-entry-and-scope.md": "19272a841705183e3ed142a72079ea16181afb52bec4d54649130f2b7cca98cc",
+      "assets/listing-staff-entry-shell.html": "c4ab7a292b9a675f8dfdb9bd798f0f83c2630764d6698b7451985c7ae346584b",
+      "references/00-entry-and-scope.md": "d9fb6e29f56759b29ab7df2530ab075a484884dd8d633077f34c5a6280503bce",
       "references/01-recon-and-fact-ledger.md": "3b234f3cd7a2843b4ec6b6c9596da7db5fba02ec874f892f528de41f6cc7a4a8",
       "references/02-two-round-questions.md": "dfdad7a40f44c13f3ca60af87a2172b0655932cb94dc05eac862cb716269b20a",
       "references/03-divergent-generation.md": "0911f8c21bde4adaaeacf35246749040c28fc9a74ae324b63e04fdb49f04dd72",
-      "references/04-buyer-judgment.md": "6db405c1828fa73a10771ed4af45df840e1bc6cd7d701a23c22f2c75a179cab5",
+      "references/04-buyer-judgment.md": "3d917f0e0ad3fe08ecced8edf9bc1d8a504f58c14c1a2ee2b81a8a1e43c453cc",
       "references/05-shopping-ai-answer-map.md": "ef79b79d867ce1a56bd80764e62a6ee82639dbb7fcdc800d0ee1e84a8979719c",
-      "references/06-surface-allocation-and-aplus-handoff.md": "2c4ca8314bafd15a0a6265b08ca726a4cffa92783358bcbeb61dc6e8823be0c1",
+      "references/06-surface-allocation-and-aplus-handoff.md": "4c82d2390696f9b5db5662b26a2462ab18cc1d659905bafe7107703884a52857",
       "references/category-adapters-and-experiments.md": "320405f7d058a26747a22e8127d0e992a181d3b826ae9d611a71f76ca0b2e85b"
     },
     "amazon-premium-aplus-planner": {
       "SKILL.md": "d564d17e7a7223f41c76ba8db1b72135f03b5eae57cb13f7cdb3caceb60a816a",
-      "agents/openai.yaml": "ece792a97c65bf2482746fb23c6a4da74eebacb268797c727a2b008919c85597",
+      "agents/openai.yaml": "928d174f1b30ff1baa613cff9bf62fe318bd0794a9313cc78dd16901ae5b965b",
       "assets/full-width-report-shell.html": "6d93cfaef3d30bb9cd44e891fb23ebcd7cb4bfed4b629b4c78b171ce967979a5",
       "references/01-aplus-strategy-and-modules.md": "9bf856e86fc1cd35dfe954e386b062806c8ab708a8eef5816f77642186dc6bc5",
       "references/02-editorial-acceptance.md": "b87c96c1bca7790e5a821dc3a354d17974f78e8f71223e2ce38161c13358d80a",

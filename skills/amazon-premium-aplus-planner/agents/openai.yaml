@@ -1,6 +1,6 @@
 interface:
   display_name: "亚马逊 A+ 规划"
-  short_description: "把 Listing 胜出方向展开为模块级 A+ / Brand Story 方案、视觉简报与 ALT；独立模式复用同一套预研与提问"
+  short_description: "把 Listing 胜出方向展开为 A+ 模块、Brand Story、视觉简报与 ALT"
   default_prompt: "请使用 $amazon-premium-aplus-planner 规划 A+：若已有 Listing 定稿与交接简报则用嵌入模式，不重新访谈；否则先并行预研与第一轮提问，再设计模块序列、生成 2–3 套、买家评审后定稿。只做内部方案，不改后台。"
 policy:
   allow_implicit_invocation: true
