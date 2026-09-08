@@ -1,26 +1,39 @@
 # 亚马逊页面优化
 
-`amazon-listing-catalog-workflow` 是 Amazon Listing 页面优化技能，支持 Title、Item Highlight、五点、图片构想与 ALT、属性及 A+ 交接。
+这是供支持 Skills 的 AI 编程助手读取的指令包，不是可双击运行的程序，也不是粘贴 GitHub 链接便会自动安装的网页应用。
 
-本仓库保存 2026-09-08 从本地安装目录导出的当前版本，技能源文件保持原样。入口见 [SKILL.md](SKILL.md)。
+核心能力：Title、Item Highlight、五点、图片构想/ALT、属性内部优化；预研、两轮提问、多稿生成、评审及只读报告。入口见 [SKILL.md](SKILL.md)。
 
-## 工作方式
+## 推荐安装：Codex
 
-范围确认 → 并行预研 → 第一轮事实与设计初衷提问 → 简报合成 → 多稿独立生成 → 买家评估与事实/规则检查 → 第二轮分歧提问 → 定稿与交付。
-
-产物包括事实台账、竞争取舍表、三通道文案（SAFE / CANDIDATE / HOLD）、购物 AI 答案地图及只读 HTML。运行环境不支持子智能体时，按技能内的降级规则执行。
-
-## 安装与使用
-
-在已配置 GitHub 私有仓库访问权限的环境中：
+仓库公开可读，不需要 GitHub 账号。需要本地 Git，目标目录尚不存在：
 
 ```sh
-git clone https://github.com/HelloYoung2025/amazon-listing-catalog-workflow.git ~/.codex/skills/amazon-listing-catalog-workflow
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+git clone https://github.com/HelloYoung2025/amazon-listing-catalog-workflow.git "${CODEX_HOME:-$HOME/.codex}/skills/amazon-listing-catalog-workflow"
 ```
 
-目标目录需尚不存在；已有安装时先自行备份或选择其他位置克隆。
+已有同名目录时不要覆盖，先备份或选择其他目录。安装完成后在下一轮对话中调用；如果技能列表尚未刷新，重开客户端后再检查。
 
-使用示例：
+也可把下面完整指令发给 Codex 内置的 `$skill-installer`：
+
+```text
+请从 HelloYoung2025/amazon-listing-catalog-workflow 安装技能。
+仓库内路径是 .，安装名称必须显式指定为 amazon-listing-catalog-workflow。
+调用安装器时使用 --repo HelloYoung2025/amazon-listing-catalog-workflow --path . --name amazon-listing-catalog-workflow
+```
+
+**根目录安装注意**：只传仓库首页 URL 会报 `Missing --path for GitHub URL`；只传 `--path .` 而不指定 `--name` 会报 `Invalid skill name`。请使用上面的完整参数。
+
+## ZIP 安装与其他工具
+
+从 [Releases](https://github.com/HelloYoung2025/amazon-listing-catalog-workflow/releases/latest) 下载 `amazon-listing-catalog-workflow.zip`。它的顶层目录固定为 `amazon-listing-catalog-workflow/`，下面直接是 `SKILL.md`、`agents/`、`references/`、`assets/`。
+
+Codex 手动安装：将 ZIP 内这个完整目录放进自己的 skills 目录。不要只复制 `SKILL.md`，也不要再嵌套一层同名目录。GitHub 的 “Code → Download ZIP” 是源码压缩包，目录名通常带 `-main`，不等于本项目提供的安装 ZIP。
+
+其他工具请使用其支持的技能导入方式；普通聊天框上传 ZIP 不等于完成技能注册。目前只实际验证了 Codex 安装器和 ZIP 解压后的包结构，尚未验证 Claude / Cursor 各版本的 UI 导入兼容性。`agents/openai.yaml` 是 Codex 元数据，其他工具是否识别取决于其自身实现。
+
+## 调用
 
 ```text
 请使用 $amazon-listing-catalog-workflow 启动亚马逊页面优化。
@@ -28,18 +41,35 @@ git clone https://github.com/HelloYoung2025/amazon-listing-catalog-workflow.git 
 先让我选择工作范围，确认后开始。
 ```
 
-## 文件结构
+预期先识别产品并给出范围选择；资料不足时先澄清，不会直接声称已完成完整调研。没有子智能体时可顺序执行并声明非独立评审；没有联网能力时使用你提供的页面资料；没有文件写入能力时交付聊天内 Markdown。
 
-- `SKILL.md`：入口及编排规则。
-- `agents/openai.yaml`：显示名称、默认提示与调用策略。
-- `references/`：范围、预研、提问、生成、评审、答案地图、字段分工与品类参考。
-- `assets/listing-staff-entry-shell.html`：只读交付模板。
+## 可选依赖
 
-## 配套技能与边界
+| 功能 | 本包是否可独立完成 |
+|---|---|
+| A/B/C/D/F 内部 Listing 优化 | 是，需要相应资料与宿主工具能力 |
+| A+ 交接简报 | 是 |
+| 完整 A+ / Premium A+ 规划 | 否，需另装 `amazon-premium-aplus-planner` |
+| 正式 Bundle / preflight 校验 | 否，需另装 `amazon-listing-publish-gate` |
+| Amazon / ERP 在线写入 | 不属于本技能 |
 
-- A+ 规划交接使用 `amazon-premium-aplus-planner`，本仓库不包含该技能。
-- 正式 Bundle、preflight 与发布支持使用 `amazon-listing-publish-gate`，本仓库不包含该技能。
-- 默认只做内部方案；不会因此获得 Amazon 或 ERP 的写入权限。
-- 字段能力及平台规则应在实际使用时核实。规则示例不替代当前官方要求。
+缺少可选技能不会阻塞基础 Listing 工作，也不会伪装成已执行完整 A+ 或发布校验。
 
-本仓库仅包含可复用技能文件，不包含产品项目资料、账号凭据或本次 Listing 优化成果。
+## 常见问题
+
+- **找不到技能**：检查 `skills/amazon-listing-catalog-workflow/SKILL.md` 是否直接存在，避免目录多嵌套一层，并检查实际使用的 `CODEX_HOME`。
+- **提示目录已存在**：安装器为避免覆盖会主动停止；不是仓库不可访问。
+- **读不到 Amazon 页面**：这属于页面访问/资料问题，可提供页面文字或截图继续，不能据此推断安装失败。
+- **找不到 A+ / publish-gate**：参见依赖表，本包只对相应功能给出交接或能力缺失说明。
+
+## 维护与发布检查
+
+以下命令用于维护者检查与打包，普通使用者无需安装 Python/PyYAML：
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python scripts/check_release.py
+```
+
+检查会校验 YAML、名称、相对资源链接、安装包目录、模板渲染及解压后文件一致性，并生成安装 ZIP。GitHub Actions 对 push、PR 运行相同检查。每次发布还需在空白临时目录用实际 Codex 安装器安装远程提交；模板和格式通过不能代表文案质量或所有客户端都可用。
