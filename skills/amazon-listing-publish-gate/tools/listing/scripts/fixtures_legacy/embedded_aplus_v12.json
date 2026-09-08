@@ -1,0 +1,1004 @@
+{
+  "assets": [
+    {
+      "ai_rule_checked_at": "",
+      "ai_rule_source_ids": [],
+      "alt": "White device beside its included cable on a table.",
+      "application_scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "applied_child_asins": [
+        "B0EXAMPLE1"
+      ],
+      "asset_role": "contents proof",
+      "claim_ids": [
+        "CLAIM-1"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "file": "device-contents.jpg",
+      "generation_method": "real_photography",
+      "id": "A01",
+      "module_id": "M01",
+      "must_not_change": [
+        "Quantity",
+        "Color",
+        "Included item"
+      ],
+      "must_show": [
+        "Actual device",
+        "Included cable"
+      ],
+      "product_fidelity_evidence": [
+        "Physical sample comparison"
+      ],
+      "product_fidelity_owner": "Product",
+      "product_fidelity_status": "PASS",
+      "product_reference_files": [
+        "device-contents.jpg"
+      ],
+      "qa_status": "PASS",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "synthetic_person": "no",
+      "visible_facts": [
+        "FACT-1"
+      ]
+    }
+  ],
+  "baseline": {
+    "alt_snapshot_ref": "",
+    "application_state_ref": "",
+    "asset_snapshot_ref": "",
+    "captured_at": "",
+    "concurrent_edit_status": "UNKNOWN",
+    "content_ids": [],
+    "copy_snapshot_ref": "",
+    "frontend_source_ids": [],
+    "id": "",
+    "owner": "",
+    "status": "NOT_FROZEN"
+  },
+  "capability_snapshots": [
+    {
+      "account_scope": "fixture-account",
+      "available_module_types": [
+        "PREMIUM_IMAGE_TEXT"
+      ],
+      "backend_field_paths": [
+        "modules.M01.native_body"
+      ],
+      "checksum": "sha256:capability-fixture",
+      "content_type": "PREMIUM_A_PLUS",
+      "eligibility_status": "PREMIUM",
+      "field_limits": {},
+      "id": "CAP-1",
+      "locale": "en-US",
+      "marketplace": "US",
+      "owner": "Operations",
+      "retrieved_at": "2026-08-27T12:00:00+08:00",
+      "source_ids": [
+        "SRC-ALT",
+        "SRC-BACKEND"
+      ],
+      "status": "CURRENT"
+    }
+  ],
+  "carriers": [
+    {
+      "answer_unit_ids": [
+        "ANSWER-1"
+      ],
+      "application_scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "asset_ids": [],
+      "backend_field_path": "modules.M01.native_body",
+      "capability_snapshot_id": "CAP-1",
+      "carrier_type": "native_text",
+      "claim_ids": [
+        "CLAIM-1",
+        "CLAIM-2"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "coverage_role": "PRIMARY_NATIVE_ANSWER",
+      "decision_requirement_ids": [
+        "REQ-PARENT-1"
+      ],
+      "fact_ids": [
+        "FACT-1",
+        "FACT-2"
+      ],
+      "id": "CARRIER-1",
+      "mobile_behavior": "Native text remains readable on mobile.",
+      "module_id": "M01",
+      "owner": "Content QA",
+      "qa_status": "PASS"
+    }
+  ],
+  "change_set": [],
+  "claims": [
+    {
+      "consumer_facing": true,
+      "content_status": "FINAL_CANDIDATE",
+      "fact_ids": [
+        "FACT-1"
+      ],
+      "id": "CLAIM-1",
+      "owner": "Product",
+      "publish_status": "PUBLISHABLE",
+      "risk_type": "ordinary",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "text": "One device is included."
+    },
+    {
+      "consumer_facing": true,
+      "content_status": "FINAL_CANDIDATE",
+      "fact_ids": [
+        "FACT-2"
+      ],
+      "id": "CLAIM-2",
+      "owner": "Compliance",
+      "publish_status": "PUBLISHABLE",
+      "risk_type": "performance",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "text": "Up to 10 hours under stated test conditions."
+    }
+  ],
+  "competitor_insights": [],
+  "conflicts": [],
+  "coverage_summary": {
+    "gap_requirement_ids": [],
+    "p0_pass": 1,
+    "p0_required": 1,
+    "status": "PASS"
+  },
+  "decision_answer_units": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "buyer_question": "What is included and what is the tested limit?",
+      "claim_ids": [
+        "CLAIM-1",
+        "CLAIM-2"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "early_disclosure_required": false,
+      "fact_ids": [
+        "FACT-1",
+        "FACT-2"
+      ],
+      "id": "ANSWER-1",
+      "module_id": "M01",
+      "native_field_path": "modules.M01.native_body",
+      "owner": "Content QA",
+      "primary_carrier_id": "CARRIER-1",
+      "priority": "P0",
+      "qa_status": "PASS",
+      "requirement_id": "REQ-PARENT-1",
+      "text": "One device is included."
+    }
+  ],
+  "decision_map": {
+    "dimensions": [
+      {
+        "answer": "A buyer who needs the scoped device.",
+        "fact_ids": [
+          "FACT-1"
+        ],
+        "id": "core_user",
+        "source_ids": [
+          "SRC-SPEC"
+        ],
+        "status": "SUPPORTED"
+      }
+    ],
+    "owner": "Strategy",
+    "status": "SUPPORTED"
+  },
+  "delta_evidence_requests": [],
+  "enriched_content_handoff": {
+    "application_scope": {
+      "child_asins": [
+        "B0EXAMPLE1"
+      ],
+      "colors": [
+        "White"
+      ],
+      "packs": [
+        "1"
+      ],
+      "parent_asins": [
+        "B0PARENT01"
+      ],
+      "sizes": [
+        "N/A"
+      ]
+    },
+    "blocked_claim_ids": [],
+    "capability_snapshot_ids": [
+      "CAP-1"
+    ],
+    "checksum": "sha256:handoff-fixture",
+    "claim_ids": [
+      "CLAIM-1",
+      "CLAIM-2"
+    ],
+    "conflict_ids": [],
+    "contract_version": "1.0",
+    "created_at": "2026-08-28T00:00:00+08:00",
+    "decision_requirements": [
+      {
+        "application_scope": {
+          "child_asins": [
+            "B0EXAMPLE1"
+          ],
+          "colors": [
+            "White"
+          ],
+          "packs": [
+            "1"
+          ],
+          "parent_asins": [
+            "B0PARENT01"
+          ],
+          "sizes": [
+            "N/A"
+          ]
+        },
+        "assigned_surface": "enriched_content",
+        "buyer_question": "What is included and what is the tested limit?",
+        "claim_ids": [
+          "CLAIM-1",
+          "CLAIM-2"
+        ],
+        "early_disclosure_required": false,
+        "fact_ids": [
+          "FACT-1",
+          "FACT-2"
+        ],
+        "id": "REQ-PARENT-1",
+        "native_answer_required": true,
+        "priority": "P0",
+        "status": "READY",
+        "upstream_primary_carrier_ref": ""
+      }
+    ],
+    "fact_ids": [
+      "FACT-1",
+      "FACT-2"
+    ],
+    "locale": "en-US",
+    "marketplace": "US",
+    "maximum_output": "preflight_package",
+    "owner": "Parent Listing owner",
+    "parent_bundle_sha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "parent_project_id": "PARENT-PROJECT-1",
+    "product_type": "DEVICE",
+    "prohibited_actions": [
+      "modify_parent_truth",
+      "expand_application_scope",
+      "online_submission"
+    ],
+    "requested_content_types": [
+      "PREMIUM_A_PLUS"
+    ],
+    "snapshot_id": "HANDOFF-1",
+    "source_ids": [
+      "SRC-SPEC",
+      "SRC-TEST",
+      "SRC-BACKEND"
+    ],
+    "status": "FROZEN",
+    "variant_row_ids": [
+      "V-PARENT-1"
+    ]
+  },
+  "experiments": [],
+  "facts": [
+    {
+      "evidence_strength": "E3",
+      "evidence_type": "DOCUMENTED_SPEC",
+      "id": "FACT-1",
+      "observed_at": "2026-08-27",
+      "owner": "Product",
+      "proving_source_ids": [
+        "SRC-SPEC"
+      ],
+      "publish_status": "PUBLISHABLE",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_ids": [
+        "SRC-SPEC"
+      ],
+      "statement": "The selected child includes one device."
+    },
+    {
+      "evidence_strength": "E4",
+      "evidence_type": "PHYSICAL_TEST",
+      "id": "FACT-2",
+      "observed_at": "2026-08-27",
+      "owner": "Lab",
+      "proving_source_ids": [
+        "SRC-TEST"
+      ],
+      "publish_status": "PUBLISHABLE",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_ids": [
+        "SRC-TEST"
+      ],
+      "statement": "The tested operating limit is 10 hours."
+    }
+  ],
+  "gates": [
+    {
+      "evidence": [
+        "G0-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G0",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G1-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G1",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G2-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G2",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G3-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G3",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G4-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G4",
+      "owner": "Independent QA",
+      "status": "PASS"
+    }
+  ],
+  "live_readback": [],
+  "modules": [
+    {
+      "acceptance_tests": [
+        "Contents match the selected child."
+      ],
+      "application_scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "applied_child_asins": [
+        "B0EXAMPLE1"
+      ],
+      "claim_ids": [
+        "CLAIM-1",
+        "CLAIM-2"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "decision_priority": "P0",
+      "decision_question": "What is included and what is the tested limit?",
+      "eligibility_source_ids": [
+        "SRC-ALT",
+        "SRC-BACKEND"
+      ],
+      "evidence_gate_status": "PASS",
+      "experiment_eligible": true,
+      "fact_ids": [
+        "FACT-1",
+        "FACT-2"
+      ],
+      "hold_claim_ids": [],
+      "id": "M01",
+      "image_brief": "Show the real device and included contents.",
+      "mobile_plan": "Keep product and native headline visible.",
+      "module_type": "PREMIUM_IMAGE_TEXT",
+      "module_type_verified_at": "2026-08-27",
+      "native_body": "One device is included. See the tested conditions.",
+      "native_headline": "Know What You Receive",
+      "on_image_text": "",
+      "owner": "Creative",
+      "prohibited_claims": [
+        "No untested absolute performance"
+      ],
+      "qa_status": "PASS",
+      "visible_proof_fact_ids": [
+        "FACT-1"
+      ],
+      "wrong_user_or_use": "Do not use outside the stated conditions."
+    }
+  ],
+  "platform_limits": {
+    "alt_max_chars": 100,
+    "available_module_types": [
+      "PREMIUM_IMAGE_TEXT"
+    ],
+    "basic_max_modules": 5,
+    "content_type_eligibility": "PREMIUM",
+    "last_verified_at": "2026-08-27T12:00:00+08:00",
+    "premium_max_modules": 7,
+    "source_id": "SRC-ALT",
+    "source_ids": [
+      "SRC-ALT"
+    ]
+  },
+  "positioning": {
+    "category": "Device",
+    "core_audience": "Scoped buyers",
+    "high_value_situation": "Before purchase",
+    "important_limit_claim_ids": [
+      "CLAIM-2"
+    ],
+    "job": "Choose the correct item",
+    "mechanism_fact_ids": [
+      "FACT-1"
+    ],
+    "owner": "Strategy",
+    "primary_benefit": "Clear contents",
+    "statement": "A clearly scoped device with tested limits.",
+    "status": "SUPPORTED"
+  },
+  "project": {
+    "conclusion": "PASS",
+    "conditional_draft": {
+      "blocked_outputs": [],
+      "blocker_ids": [],
+      "maximum_work": "full_production",
+      "status": "CLEARED"
+    },
+    "focal_identity": {
+      "identifier": "B0EXAMPLE1",
+      "identifier_type": "asin",
+      "identity_status": "VERIFIED_CHILD",
+      "provisional_parent": "B0PARENT01",
+      "verification_source_ids": [
+        "SRC-BACKEND",
+        "SRC-PDP-BASE"
+      ],
+      "verified_focal_child": "B0EXAMPLE1"
+    },
+    "locale": "en-US",
+    "marketplace": "US",
+    "mode": "rebuild",
+    "snapshot_date": "2026-08-27",
+    "status": "ACTIVE",
+    "target_type": "live_asin",
+    "title": "Example Premium A+ rebuild",
+    "write_scope": "read_only"
+  },
+  "publish_authorization": {
+    "allowed_actions": [],
+    "authorization_id": "",
+    "authorized_at": "",
+    "authorized_by": "",
+    "change_set_ids": [],
+    "child_asins": [],
+    "content_ids": [],
+    "expires_at": "",
+    "locales": [],
+    "marketplaces": [],
+    "prohibited_actions": [],
+    "source_ids": [],
+    "status": "NOT_AUTHORIZED",
+    "systems": []
+  },
+  "rollback": {
+    "baseline_id": "",
+    "method": "",
+    "protected_p0_fact_ids": [],
+    "responsible_owner": "",
+    "source_ids": [],
+    "status": "NOT_READY",
+    "trigger_conditions": [],
+    "verification_steps": []
+  },
+  "schema_version": "1.2",
+  "scope": {
+    "colors": [
+      "White"
+    ],
+    "intended_child_asins": [
+      "B0EXAMPLE1"
+    ],
+    "locales": [
+      "en-US"
+    ],
+    "marketplaces": [
+      "US"
+    ],
+    "other_dimensions": {
+      "style": [
+        "N/A"
+      ]
+    },
+    "packs": [
+      "1"
+    ],
+    "parent_asins": [
+      "B0PARENT01"
+    ],
+    "sizes_or_capacities": [
+      "N/A"
+    ],
+    "source_ids": [
+      "SRC-BACKEND"
+    ],
+    "status": "FROZEN"
+  },
+  "sources": [
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-ALT",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "https://developer-docs.amazon.com/sp-api/docs/a-plus-content-examples",
+      "scope": {
+        "child_asins": [],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "OFFICIAL_PLATFORM_RULE",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-SPEC",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "/evidence/spec.pdf",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "DOCUMENTED_SPEC",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-TEST",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "/evidence/test.pdf",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "PHYSICAL_TEST",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-BACKEND",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "/evidence/backend-export.json",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "BACKEND_OBSERVED",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-PDP-BASE",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "https://www.amazon.com/dp/B0EXAMPLE1",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "PUBLIC_OBSERVED",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-PDP-LIVE",
+      "observed_at": "2026-08-27T14:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "https://www.amazon.com/dp/B0EXAMPLE1",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "PUBLIC_OBSERVED",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "The scoped observation described by this source."
+      ],
+      "cannot_establish": [
+        "Unscoped claims."
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-AUTH",
+      "observed_at": "2026-08-27T12:00:00+08:00",
+      "owner": "Evidence owner",
+      "path_or_url": "/evidence/write-authorization.json",
+      "scope": {
+        "child_asins": [
+          "B0EXAMPLE1"
+        ],
+        "colors": [
+          "White"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1"
+        ],
+        "parent_asin": "B0PARENT01",
+        "sizes_or_capacities": [
+          "N/A"
+        ]
+      },
+      "source_type": "VERIFIED_ACCOUNT_DATA",
+      "time_window": "point_in_time",
+      "timezone": "Asia/Kuala_Lumpur"
+    }
+  ],
+  "variants": [
+    {
+      "aplus_content_id": "A+-001",
+      "brand_story_id": "BS-001",
+      "child_asin": "B0EXAMPLE1",
+      "color": "White",
+      "locale": "en-US",
+      "marketplace": "US",
+      "other_variant": "N/A",
+      "owner": "Operations",
+      "pack": "1",
+      "parent_asin": "B0PARENT01",
+      "size_or_capacity": "N/A",
+      "source_ids": [
+        "SRC-BACKEND"
+      ],
+      "status": "VERIFIED"
+    }
+  ],
+  "workflow_context": {
+    "accepted_at": "2026-08-28T00:30:00+08:00",
+    "accepted_by": "A+ owner",
+    "accepted_handoff_snapshot_id": "HANDOFF-1",
+    "execution_boundary": "read_only",
+    "mode": "embedded",
+    "parent_bundle_ref": "/evidence/parent-listing-bundle.json"
+  }
+}

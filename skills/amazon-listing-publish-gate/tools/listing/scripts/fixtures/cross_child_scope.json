@@ -1,0 +1,1 @@
+{"fixture_id":"cross_child_scope","mutations":[{"op":"set","path":"field_candidates.0.application_scope.child_asins","value":["CHILD-OTHER"]}],"expected_code":"LST-SCOPE-005"}

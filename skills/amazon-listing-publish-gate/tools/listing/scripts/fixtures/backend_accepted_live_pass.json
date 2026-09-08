@@ -1,0 +1,1 @@
+{"fixture_id":"backend_accepted_live_pass","mutations":[{"op":"set","path":"live_readback","value":[{"child_asin":"CHILD-1","status":"ACCEPTED_BACKEND","live_pass":true}]}],"expected_code":"LST-READBACK-005"}

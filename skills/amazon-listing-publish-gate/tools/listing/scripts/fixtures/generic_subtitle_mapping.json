@@ -1,0 +1,1 @@
+{"fixture_id":"generic_subtitle_mapping","mutations":[{"op":"set","path":"field_resolutions.0.canonical_key","value":"subtitle"}],"expected_code":"LST-FIELD-002"}

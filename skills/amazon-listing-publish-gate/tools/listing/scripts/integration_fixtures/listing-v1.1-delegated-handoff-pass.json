@@ -1,0 +1,1036 @@
+{
+  "baseline": [],
+  "canonical_assertions": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "claim_ids": [
+        "C-1"
+      ],
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "CA-1",
+      "owner": "qa",
+      "statement": "Includes one black spatula.",
+      "status": "FINAL"
+    }
+  ],
+  "catalog_context": {
+    "identifier": "B0V11CHILD",
+    "identifier_type": "ASIN",
+    "identity_status": "FROZEN",
+    "owner": "qa",
+    "parentage_level": "child",
+    "product_type": "KITCHEN_TOOL",
+    "source_ids": [
+      "SRC-SC"
+    ]
+  },
+  "category_adapter": {
+    "evidence_probes": [],
+    "name": "generic",
+    "qa_checks": [],
+    "question_prompts": [],
+    "return_risks": [],
+    "status": "READY",
+    "version": "1.0"
+  },
+  "change_set": [],
+  "claims": [
+    {
+      "allowed_expression": "Includes one black spatula.",
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "can_prove": [
+        "included item"
+      ],
+      "cannot_prove": [
+        "performance"
+      ],
+      "content_status": "PUBLISHABLE",
+      "evidence_level": "E3",
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "C-1",
+      "owner": "qa",
+      "prohibited_inferences": [
+        "includes accessories"
+      ],
+      "proving_source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "refresh_trigger": "variant or packaging change",
+      "source_ids": [
+        "SRC-SC",
+        "SRC-PRODUCT"
+      ],
+      "support_status": "SUPPORTED",
+      "text": "Includes one black spatula."
+    }
+  ],
+  "conflicts": [],
+  "decision_answer_units": [],
+  "decision_denominator_snapshot": {
+    "atoms": [
+      {
+        "id": "ATOM-1",
+        "locale": "en-US",
+        "marketplace": "US",
+        "requirement_id": "DR-1",
+        "variant_row_id": "V-1"
+      }
+    ],
+    "checksum": "sha256:fe38dc3ef32dcb65960b79d8e979ca69c36926901a4667013400a031d7a63df1",
+    "frozen_at": "2026-08-28T01:05:00Z",
+    "requirement_ids": [
+      "DR-1"
+    ],
+    "status": "FROZEN",
+    "variant_row_ids": [
+      "V-1"
+    ]
+  },
+  "decision_map": {
+    "requirements": [
+      {
+        "application_scope": {
+          "child_asins": [
+            "B0V11CHILD"
+          ],
+          "colors": [
+            "Black"
+          ],
+          "packs": [
+            "1PK"
+          ],
+          "parent_asins": [
+            "B0V11PARNT"
+          ],
+          "sizes": [
+            "M"
+          ]
+        },
+        "assigned_surface": "enriched_content",
+        "buyer_question": "What is included?",
+        "claim_ids": [
+          "C-1"
+        ],
+        "early_disclosure_required": false,
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "DR-1",
+        "native_answer_required": true,
+        "owner": "qa",
+        "priority": "P0",
+        "status": "READY",
+        "upstream_primary_carrier_ref": ""
+      }
+    ],
+    "status": "FROZEN"
+  },
+  "discovery": {
+    "closure": {
+      "closed_at": "2026-08-28T01:04:00Z",
+      "owner": "qa",
+      "reason": "Recon, product truth, Round 2, intent, and one-bet closed.",
+      "status": "PASS"
+    },
+    "distillations": [
+      {
+        "claim_ids": [
+          "C-1"
+        ],
+        "conflict_ids": [],
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "D-1",
+        "payload": {
+          "coverage": "Scoped included quantity is verified."
+        },
+        "record_type": "PRODUCT_TRUTH",
+        "response_ids": [
+          "R-1"
+        ]
+      },
+      {
+        "claim_ids": [
+          "C-1"
+        ],
+        "conflict_ids": [],
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "D-2",
+        "payload": {
+          "decision": "Exact included quantity is the highest-friction decision."
+        },
+        "record_type": "ROUND_2_SYNTHESIS",
+        "response_ids": [
+          "R-2"
+        ]
+      },
+      {
+        "claim_ids": [
+          "C-1"
+        ],
+        "conflict_ids": [],
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "D-3",
+        "payload": {
+          "alternative_explanations": "Price and performance may also matter, but they do not resolve included quantity.",
+          "chosen_form": "State the exact included quantity in a native answer.",
+          "current_choice": "Make exact included quantity the lead purchase-decision answer.",
+          "current_version_continuity": "The verified current pack still contains one black spatula.",
+          "deliberate_tradeoff": "Lead with purchase clarity instead of a broad performance promise.",
+          "intended_mechanism": "A scoped quantity statement removes the inference step.",
+          "longitudinal_observation": "Current research repeatedly exposed quantity ambiguity as a decision risk.",
+          "original_problem": "Buyers could not tell what quantity was included.",
+          "prior_alternative": "Rely on imagery or infer quantity from category convention."
+        },
+        "record_type": "PRODUCT_INTENT_BRIEF",
+        "response_ids": [
+          "R-2"
+        ]
+      },
+      {
+        "claim_ids": [
+          "C-1"
+        ],
+        "conflict_ids": [],
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "D-4",
+        "payload": {
+          "closest_alternative": "A generic category listing that leaves quantity to inference.",
+          "desired_progress": "Choose the correct pack without a preventable quantity surprise.",
+          "hero_moment": "The shopper checks exactly what arrives before buying.",
+          "material_boundary": "This route proves included quantity, not superior performance.",
+          "mechanism": "A native, scoped one-item statement answers the decision directly.",
+          "proof_status": "PROVED",
+          "rejected_route_ids": [
+            "ROUTE-PERFORMANCE-LEAD"
+          ],
+          "rejected_route_reasons": {
+            "ROUTE-PERFORMANCE-LEAD": "No comparative performance evidence supports that lead."
+          },
+          "reversibility_test": "Run a controlled copy test and revert if purchase-quality guardrails worsen.",
+          "route_registry": [
+            {
+              "closest_alternative": "A generic category listing that leaves quantity to inference.",
+              "core_user_or_state": "A shopper who must confirm the exact pack before purchase.",
+              "decision_consequence": "Lead the first-screen decision with exact included quantity.",
+              "desired_progress": "Choose the correct pack without a preventable quantity surprise.",
+              "hero_moment": "The shopper checks exactly what arrives before buying.",
+              "material_boundary": "This route proves included quantity, not superior performance.",
+              "mechanism": "A native, scoped one-item statement answers the decision directly.",
+              "proof_status": "PROVED",
+              "route_id": "ROUTE-QUANTITY-CLARITY"
+            },
+            {
+              "closest_alternative": "A competing tool with verified comparative performance evidence.",
+              "core_user_or_state": "A shopper comparing product performance before purchase.",
+              "decision_consequence": "Reject this route until comparative evidence is established.",
+              "desired_progress": "Choose the strongest performer for the intended task.",
+              "hero_moment": "The shopper compares this item with a performance-led alternative.",
+              "material_boundary": "No target comparative evidence currently supports this route.",
+              "mechanism": "A comparative performance claim would carry the decision.",
+              "proof_status": "UNSUPPORTED",
+              "route_id": "ROUTE-PERFORMANCE-LEAD"
+            }
+          ],
+          "selected_route_id": "ROUTE-QUANTITY-CLARITY"
+        },
+        "record_type": "ONE_BET_SELECTION",
+        "response_ids": [
+          "R-2"
+        ]
+      }
+    ],
+    "evidence_actions": [],
+    "evidence_pass": {
+      "observations": [
+        {
+          "id": "OBS-1",
+          "statement": "One child and one pack observed."
+        }
+      ],
+      "source_ids": [
+        "SRC-SC",
+        "SRC-PRODUCT",
+        "SRC-PDP"
+      ],
+      "status": "COMPLETE"
+    },
+    "interview_rounds": [
+      {
+        "id": "IR-1",
+        "questions": [
+          {
+            "id": "Q-1",
+            "impact_dimensions": [
+              "VARIANT",
+              "PROMISE"
+            ],
+            "question": "What is included?",
+            "response_id": "R-1"
+          }
+        ],
+        "round_type": "TRUTH"
+      },
+      {
+        "id": "IR-2",
+        "questions": [
+          {
+            "id": "Q-2",
+            "impact_dimensions": [
+              "SCENARIO",
+              "FIELD_ALLOCATION",
+              "STRATEGIC_SELECTION"
+            ],
+            "question": "Which closed inclusion answer should lead the purchase decision?",
+            "response_id": "R-2"
+          }
+        ],
+        "round_type": "POSITIONING"
+      }
+    ],
+    "responses": [
+      {
+        "answer": "One spatula",
+        "classification": "FACT_LEAD",
+        "id": "R-1",
+        "owner": "qa",
+        "p0_impact": true,
+        "source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "status": "ANSWERED"
+      },
+      {
+        "answer": "Lead with exact included quantity to prevent a wrong purchase.",
+        "classification": "STRATEGIC_CHOICE",
+        "id": "R-2",
+        "owner": "qa",
+        "p0_impact": true,
+        "source_ids": [],
+        "status": "ANSWERED"
+      }
+    ],
+    "stage_gates": [
+      {
+        "closed_at": "2026-08-28T00:30:00Z",
+        "evidence_source_ids": [
+          "SRC-SC",
+          "SRC-PDP",
+          "SRC-COMP"
+        ],
+        "id": "GATE-RECON",
+        "owner": "qa",
+        "reason": "",
+        "record_refs": [
+          "SRC-PDP",
+          "market_research",
+          "VOC-1",
+          "COMP-1",
+          "MR-1"
+        ],
+        "result": "Target, competitor, use-path, and current-rule reconnaissance completed before Round 1.",
+        "stage": "RECONNAISSANCE",
+        "status": "PASS"
+      },
+      {
+        "closed_at": "2026-08-28T01:00:00Z",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "GATE-TRUTH",
+        "owner": "qa",
+        "reason": "",
+        "record_refs": [
+          "IR-1",
+          "D-1",
+          "F-1"
+        ],
+        "result": "Scoped inclusion truth closed after Round 1.",
+        "stage": "PRODUCT_TRUTH",
+        "status": "PASS"
+      },
+      {
+        "closed_at": "2026-08-28T01:01:00Z",
+        "evidence_source_ids": [
+          "SRC-COMP"
+        ],
+        "id": "GATE-R2",
+        "owner": "qa",
+        "reason": "",
+        "record_refs": [
+          "IR-2",
+          "R-2",
+          "D-2"
+        ],
+        "result": "Purchase-decision route evaluated in Round 2.",
+        "stage": "ROUND_2",
+        "status": "PASS"
+      },
+      {
+        "closed_at": "2026-08-28T01:02:00Z",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "GATE-INTENT",
+        "owner": "qa",
+        "reason": "",
+        "record_refs": [
+          "IR-2",
+          "Q-2",
+          "R-2",
+          "D-3",
+          "F-1"
+        ],
+        "result": "Intent brief prioritizes preventing wrong included-quantity expectations.",
+        "stage": "PRODUCT_INTENT_BRIEF",
+        "status": "PASS"
+      },
+      {
+        "closed_at": "2026-08-28T01:03:00Z",
+        "evidence_source_ids": [
+          "SRC-PRODUCT",
+          "SRC-COMP"
+        ],
+        "id": "GATE-ONEBET",
+        "owner": "qa",
+        "reason": "",
+        "record_refs": [
+          "IR-2",
+          "Q-2",
+          "R-2",
+          "D-4",
+          "F-1"
+        ],
+        "result": "One reversible bet selected: exact included quantity leads.",
+        "stage": "ONE_BET",
+        "status": "PASS"
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "enriched_content_handoff": {
+    "application_scope": {
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "packs": [
+        "1PK"
+      ],
+      "parent_asins": [
+        "B0V11PARNT"
+      ],
+      "sizes": [
+        "M"
+      ]
+    },
+    "blocked_claim_ids": [],
+    "canonical_assertion_ids": [
+      "CA-1"
+    ],
+    "capability_snapshot_ids": [],
+    "checksum": "sha256:fcbfa7a1ca15b6e0db57be92fcd468e2d90c84825b3d5f095d68639a16c1eb92",
+    "claim_ids": [
+      "C-1"
+    ],
+    "conflict_ids": [],
+    "contract_version": "1.1",
+    "created_at": "2026-08-28T02:00:00Z",
+    "decision_denominator_hash": "sha256:fe38dc3ef32dcb65960b79d8e979ca69c36926901a4667013400a031d7a63df1",
+    "decision_requirements": [
+      {
+        "application_scope": {
+          "child_asins": [
+            "B0V11CHILD"
+          ],
+          "colors": [
+            "Black"
+          ],
+          "packs": [
+            "1PK"
+          ],
+          "parent_asins": [
+            "B0V11PARNT"
+          ],
+          "sizes": [
+            "M"
+          ]
+        },
+        "assigned_surface": "enriched_content",
+        "buyer_question": "What is included?",
+        "claim_ids": [
+          "C-1"
+        ],
+        "early_disclosure_required": false,
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "DR-1",
+        "native_answer_required": true,
+        "owner": "qa",
+        "priority": "P0",
+        "status": "READY",
+        "upstream_primary_carrier_ref": ""
+      }
+    ],
+    "discovery_closure_hash": "sha256:881adc07502a49b20a12e1dcf68a2b0e31775cf47f6638bb5a7422c24ad63ddc",
+    "fact_ids": [
+      "F-1"
+    ],
+    "lineage_registry": [],
+    "locale": "en-US",
+    "marketplace": "US",
+    "maximum_output": "preflight_package",
+    "owner": "qa",
+    "parent_bundle_sha256": "sha256:bc252a5a18a5f4e131a78e2f3233bde90516826eba84ebc366ceb19506c2ccc2",
+    "parent_project_id": "LISTING-V11",
+    "predecessor_snapshot_id": "",
+    "product_type": "KITCHEN_TOOL",
+    "prohibited_actions": [
+      "modify_parent_truth",
+      "expand_application_scope",
+      "online_submission"
+    ],
+    "ptd_inventory_hash": "sha256:eaa2c155b020ff5c3d8bb1111301603487d6a8039e92f62fcfbf47f81c646a60",
+    "refreeze_reason": "",
+    "requested_content_types": [
+      "PREMIUM_A_PLUS"
+    ],
+    "requirement_atoms": [
+      {
+        "id": "ATOM-1",
+        "locale": "en-US",
+        "marketplace": "US",
+        "requirement_id": "DR-1",
+        "variant_row_id": "V-1"
+      }
+    ],
+    "semantic_revision": 1,
+    "snapshot_id": "HO-5995c285b4d62ed110a9",
+    "source_ids": [
+      "SRC-PRODUCT"
+    ],
+    "status": "FROZEN",
+    "variant_row_ids": [
+      "V-1"
+    ]
+  },
+  "execution_boundary": "read_only",
+  "experiment_registry": [],
+  "facts": [
+    {
+      "allowed_expression": "Includes one black spatula.",
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "can_prove": [
+        "included item"
+      ],
+      "cannot_prove": [
+        "performance"
+      ],
+      "content_status": "PUBLISHABLE",
+      "evidence_level": "E3",
+      "id": "F-1",
+      "owner": "qa",
+      "prohibited_inferences": [
+        "includes accessories"
+      ],
+      "proving_source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "refresh_trigger": "variant or packaging change",
+      "source_ids": [
+        "SRC-SC",
+        "SRC-PRODUCT"
+      ],
+      "statement": "One black spatula is included.",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "field_candidates": [],
+  "field_resolutions": [
+    {
+      "applicable": true,
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "canonical_key": "bullet_point",
+      "data_plane": "seller_listing",
+      "editable": true,
+      "exists": true,
+      "id": "FR-BULLET",
+      "max_characters": 500,
+      "owner": "qa",
+      "requirement_status": "REQUIRED",
+      "rule_snapshot_ids": [
+        "RS-1"
+      ],
+      "semantic_role": "BULLET",
+      "status": "RESOLVED",
+      "surface": "core_copy",
+      "ui_label": "Bullet point",
+      "visibility": "BUYER_VISIBLE"
+    }
+  ],
+  "gate_reviews": [],
+  "live_readback": [],
+  "market_research": {
+    "competitor_observations": [
+      {
+        "id": "COMP-1",
+        "source_ids": [
+          "SRC-COMP"
+        ],
+        "statement": "A sampled alternative discloses included quantity in visible copy."
+      }
+    ],
+    "conclusions": [
+      {
+        "id": "MR-1",
+        "source_ids": [
+          "SRC-COMP"
+        ],
+        "statement": "Quantity answerability is a relevant decision gap; competitor evidence does not prove target contents."
+      }
+    ],
+    "owner": "qa",
+    "reason": "",
+    "source_ids": [
+      "SRC-COMP"
+    ],
+    "status": "COMPLETE",
+    "voc_observations": [
+      {
+        "id": "VOC-1",
+        "source_ids": [
+          "SRC-COMP"
+        ],
+        "statement": "Buyers need the included quantity to be explicit."
+      }
+    ]
+  },
+  "method_registry": [
+    {
+      "classification": "OFFICIAL_CURRENT",
+      "gate_eligible": true,
+      "id": "M-OFFICIAL",
+      "name": "Current account field mapping",
+      "observed_at": "2026-08-28T00:00:00Z",
+      "refresh_trigger": "before authorized submission",
+      "source_ids": [
+        "SRC-SC"
+      ],
+      "status": "CURRENT"
+    },
+    {
+      "classification": "MULTI_SOURCE_HEURISTIC",
+      "gate_eligible": false,
+      "id": "M-INTENT",
+      "name": "Who-Scenario-Problem",
+      "observed_at": "2026-08-28T00:00:00Z",
+      "refresh_trigger": "when positioning evidence changes",
+      "source_ids": [],
+      "status": "REFERENCE"
+    }
+  ],
+  "project": {
+    "conclusion": "CONDITIONAL_PASS",
+    "mode": "rebuild",
+    "notes": "local read-only",
+    "owner": "qa",
+    "project_id": "LISTING-V11",
+    "snapshot_date": "2026-08-28",
+    "status": "READY_FOR_REVIEW",
+    "target_stage": "HANDOFF_READY",
+    "title": "Listing v1.1 fixture"
+  },
+  "ptd_field_inventory": {
+    "checksum": "sha256:eaa2c155b020ff5c3d8bb1111301603487d6a8039e92f62fcfbf47f81c646a60",
+    "declared_field_count": 1,
+    "evidence_source_ids": [
+      "SRC-SC"
+    ],
+    "expected_fields": [
+      {
+        "closure_status": "CLOSED",
+        "evidence_source_ids": [
+          "SRC-SC"
+        ],
+        "field_resolution_id": "FR-BULLET",
+        "id": "EF-1",
+        "p0_relevant": true,
+        "reason": "visible in complete account field capture",
+        "requirement_status": "REQUIRED",
+        "trigger_status": "NOT_APPLICABLE"
+      }
+    ],
+    "product_type": "KITCHEN_TOOL",
+    "rule_snapshot_ids": [
+      "RS-1"
+    ],
+    "status": "COMPLETE"
+  },
+  "publish_authorization": {
+    "attempt_limit": 0,
+    "authorization_id": "",
+    "authorized_account": "",
+    "authorized_action": "",
+    "authorized_at": "",
+    "authorizer": "",
+    "baseline_sha256": "",
+    "change_set_ids": [],
+    "change_set_sha256": "",
+    "data_planes": [],
+    "expires_at": "",
+    "locale": "",
+    "marketplace": "",
+    "notes": "",
+    "rollback_scope": [],
+    "status": "NOT_AUTHORIZED",
+    "system": "",
+    "target_ids": []
+  },
+  "record_templates": {},
+  "rollback": [],
+  "rule_snapshots": [
+    {
+      "checksum": "sha256:rules",
+      "data_plane": "seller_listing",
+      "id": "RS-1",
+      "locale": "en-US",
+      "marketplace": "US",
+      "parentage_level": "child",
+      "product_type": "KITCHEN_TOOL",
+      "refresh_trigger": "before authorized submission",
+      "requirements": "LISTING",
+      "requirements_enforced": "ENFORCED",
+      "retrieved_at": "2026-08-28T00:00:00Z",
+      "schema_version": "account-2026-08-28",
+      "seller_scope": "SELLER-1",
+      "source_ids": [
+        "SRC-SC"
+      ],
+      "status": "CURRENT"
+    }
+  ],
+  "schema_version": "1.1",
+  "scope": {
+    "colors": [
+      "Black"
+    ],
+    "excluded_child_asins": [],
+    "intended_child_asins": [
+      "B0V11CHILD"
+    ],
+    "locale": "en-US",
+    "marketplace": "US",
+    "packs": [
+      "1PK"
+    ],
+    "parent_asins": [
+      "B0V11PARNT"
+    ],
+    "seller_scope": "SELLER-1",
+    "sizes": [
+      "M"
+    ]
+  },
+  "semantic_consistency_matrix": [],
+  "sources": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "authority": "primary",
+      "cannot_prove": [
+        "frontend live state"
+      ],
+      "capture_metadata": {
+        "capture_region": "complete attributes tab",
+        "captured_at": "2026-08-28T00:00:00Z",
+        "coverage": "COMPLETE",
+        "entity": "B0V11CHILD / KITCHEN_TOOL",
+        "marketplace": "US",
+        "page_context": "Manage All Inventory > Edit",
+        "seller_scope": "SELLER-1"
+      },
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "evidence_level": "E3",
+      "id": "SRC-SC",
+      "locale": "en-US",
+      "locator": "/evidence/sc.png",
+      "marketplace": "US",
+      "proves": [
+        "catalog identity",
+        "current account fields",
+        "included item"
+      ],
+      "retrieved_at": "2026-08-28T00:00:00Z",
+      "seller_scope": "SELLER-1",
+      "status": "USABLE",
+      "type": "seller_central_screenshot"
+    },
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "authority": "primary",
+      "cannot_prove": [
+        "Amazon field availability",
+        "frontend live state"
+      ],
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "evidence_level": "E3",
+      "id": "SRC-PRODUCT",
+      "locale": "en-US",
+      "locator": "/evidence/package.png",
+      "marketplace": "US",
+      "proves": [
+        "included item"
+      ],
+      "retrieved_at": "2026-08-28T00:00:00Z",
+      "seller_scope": "SELLER-1",
+      "status": "USABLE",
+      "type": "packaging_label"
+    },
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "authority": "public_observation",
+      "cannot_prove": [
+        "backend truth",
+        "current physical product capability"
+      ],
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "evidence_level": "E2",
+      "id": "SRC-PDP",
+      "locale": "en-US",
+      "locator": "https://www.amazon.com/dp/B0V11CHILD",
+      "marketplace": "US",
+      "proves": [
+        "target detail-page census at observation time"
+      ],
+      "retrieved_at": "2026-08-28T00:05:00Z",
+      "seller_scope": "SELLER-1",
+      "status": "USABLE",
+      "type": "public_frontend"
+    },
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "authority": "public_observation",
+      "cannot_prove": [
+        "target product capability",
+        "market acceptance",
+        "ranking effect"
+      ],
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "evidence_level": "E1",
+      "id": "SRC-COMP",
+      "locale": "en-US",
+      "locator": "https://www.amazon.com/example-competitor",
+      "marketplace": "US",
+      "proves": [
+        "competitor presentation and buyer-language observation"
+      ],
+      "retrieved_at": "2026-08-28T00:10:00Z",
+      "seller_scope": "SELLER-1",
+      "status": "USABLE",
+      "type": "customer_review"
+    }
+  ],
+  "surface_assignments": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "packs": [
+          "1PK"
+        ],
+        "parent_asins": [
+          "B0V11PARNT"
+        ],
+        "sizes": [
+          "M"
+        ]
+      },
+      "field_resolution_id": "",
+      "id": "SA-1",
+      "owner": "qa",
+      "primary_carrier_kind": "A_PLUS_NATIVE_PENDING",
+      "primary_surface": "enriched_content",
+      "requirement_id": "DR-1",
+      "status": "PASS",
+      "supporting_surfaces": [
+        "media"
+      ]
+    }
+  ],
+  "variant_topology": [
+    {
+      "child_asin": "B0V11CHILD",
+      "color": "Black",
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "V-1",
+      "included_items": [
+        "spatula"
+      ],
+      "pack": "1PK",
+      "parent_asin": "B0V11PARNT",
+      "seller_sku": "SKU-1",
+      "size": "M",
+      "source_ids": [
+        "SRC-SC",
+        "SRC-PRODUCT"
+      ],
+      "status": "VERIFIED",
+      "variation_theme": "ColorSize"
+    }
+  ]
+}

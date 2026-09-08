@@ -1,0 +1,6 @@
+interface:
+  display_name: "亚马逊发布门禁"
+  short_description: "校验 Listing/A+ 正式 Bundle、跑协调器与回执账本、迁移旧版、渲染只读报告"
+  default_prompt: "请使用 $amazon-listing-publish-gate 对已定稿的 Listing/A+ Bundle 做 preflight 校验，只报告本地合同结果，不做任何线上写入。"
+policy:
+  allow_implicit_invocation: false

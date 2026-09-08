@@ -1,0 +1,1 @@
+{"fixture_id":"identity_not_frozen","mutations":[{"op":"set","path":"catalog_context.identity_status","value":"UNVERIFIED"}],"expected_code":"LST-IDENTITY-002"}

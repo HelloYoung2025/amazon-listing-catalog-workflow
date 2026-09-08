@@ -1,0 +1,1 @@
+{"fixture_id":"fabricated_community_qa","mutations":[{"op":"set","path":"field_candidates.0.semantic_role","value":"community_qa"}],"expected_code":"LST-QA-002"}

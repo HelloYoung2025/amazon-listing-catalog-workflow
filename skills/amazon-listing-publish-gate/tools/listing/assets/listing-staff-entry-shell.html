@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{TITLE}}</title>
+  <style>
+    :root{color-scheme:light;--ink:#172033;--muted:#667085;--line:#d5deea;--paper:#fff;--bg:#f3f6fa;--navy:#123b67;--green:#067647;--amber:#9a5b00;--red:#b42318}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}body{max-width:100%;margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;overflow-x:hidden}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:3;background:#fff;padding:8px}
+    header{padding:28px 3vw;color:#fff;background:linear-gradient(125deg,#0d2c4f,#1d5f96)}header h1{margin:0;font-size:clamp(25px,3vw,42px)}header p{max-width:1200px;margin:7px 0 0;color:#dbeafe}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pill{padding:5px 10px;border:1px solid rgba(255,255,255,.4);border-radius:999px}
+    main{width:100%;padding:20px 3vw 48px}.banner{padding:15px 18px;border:2px solid;border-radius:12px}.banner.pass{color:#075b39;background:#e9f8f1;border-color:#53b895}.banner.blocked{color:#7a271a;background:#ffebe9;border-color:#d92d20}.banner.conditional{color:#6b4100;background:#fff4d6;border-color:#d49a20}
+    .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin-top:16px}.card{grid-column:span 12;min-width:0;padding:19px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 8px 24px rgba(15,23,42,.045)}.half{grid-column:span 6}.third{grid-column:span 4}
+    h2{margin:0 0 10px;color:var(--navy);font-size:21px}p{margin:6px 0}.muted{color:var(--muted)}.receipt-flow ol{margin:10px 0;padding-left:22px}.receipt-flow li{margin:7px 0}.table-wrap{width:100%;max-width:100%;overflow:auto}.table-wrap:focus-visible{outline:3px solid #2e90fa;outline-offset:3px}table{width:100%;border-collapse:collapse;font-size:13px}caption{padding:0 0 8px;text-align:left;color:var(--muted);font-weight:600}th,td{padding:8px;border:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eef4fb;color:#173b67}.state{font-weight:750}.state.PASS{color:var(--green)}.state.BLOCKED,.state.FAIL,.state.NOT_AUTHORIZED{color:var(--red)}.state.CONDITIONAL,.state.HOLD{color:var(--amber)}code{overflow-wrap:anywhere}.errors li{margin:5px 0}dl{display:grid;grid-template-columns:minmax(90px,auto) 1fr;gap:8px 12px;margin:0}dt{font-weight:700;color:var(--navy)}dd{min-width:0;margin:0;overflow-wrap:anywhere}
+    footer{padding:18px 3vw 28px;color:var(--muted)}
+    @media(max-width:768px){main,header{padding-left:18px;padding-right:18px}.half,.third{grid-column:span 12}.card{padding:15px}table{min-width:720px}}
+    @media(max-width:390px){body{font-size:14px}header h1{font-size:24px}.meta{display:block}.pill{display:block;margin-top:6px}main,header,footer{padding-left:12px;padding-right:12px}.card{padding:12px}.table-wrap{max-width:calc(100vw - 48px)}dl{grid-template-columns:1fr}}
+    @media print{body{background:#fff;color:#000;overflow:visible}header{color:#000;background:#fff;border-bottom:2px solid #000}header p{color:#333}.grid{display:block}.card{margin:0 0 12px;box-shadow:none;break-inside:auto}.responsibility,.banner{break-inside:avoid}main{padding:14px 0}.table-wrap{overflow:visible}table{min-width:0;font-size:9pt}a{color:#000;text-decoration:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#report">跳到报告正文</a>
+  <header>
+    <h1>{{TITLE}}</h1>
+    <p>只读、由已验证Bundle确定性生成。JSON Bundle是唯一事实源；本页无编辑、保存、导入、导出或线上提交功能。</p>
+    <div class="meta">{{META}}</div>
+  </header>
+  <main id="report">
+    <section class="banner {{BANNER_CLASS}}" aria-label="验证结论"><strong>{{BANNER_TITLE}}</strong><p>{{BANNER_BODY}}</p></section>
+    <div class="grid">
+      <article class="card receipt-flow" aria-labelledby="coordination-receipt-title">
+        <h2 id="coordination-receipt-title">跨 Bundle 协调回执 Ledger（本地，只读）</h2>
+        <p><strong>本报告中的 coordination ledger 值：</strong><code>{{COORDINATION_RECEIPT_VALUE}}</code>。不得从 Bundle、<code>COMPONENT_PASS</code>、人工 Gate 或页面颜色推断 ledger head、receipt 或终态。</p>
+        <ol>
+          <li><strong>纯检查 / 无 Ledger：</strong>纯 coordinator 最高只形成 <code>PASS_CANDIDATE</code>；无受控 ledger 的 CLI 不会确认终态 PASS。<code>--receipt-ledger &lt;path&gt;</code>仅读取当前 head；只有同时显式使用<code>--record-receipt</code>，才以锁、append 和 fsync 向本地 JSONL ledger 追加一条有效 receipt。</li>
+          <li><strong>正常链：</strong><code>FROZEN + COMPONENT_PASS</code> → 用<code>--receipt-ledger &lt;path&gt; --record-receipt</code>将<code>AWAITING_RESULT_ACK</code>写为当前 head → Parent 仅推进到<code>RESULT_RECEIVED</code> → coordinator 用同一<code>--receipt-ledger &lt;path&gt;</code>读取 current head，并再次显式使用<code>--record-receipt</code>写入与之相链的终态 PASS receipt。</li>
+          <li><strong>DELTA / refreeze 链：</strong><code>RECONCILIATION_REQUIRED + DELTA_REQUIRED</code>把 DELTA 写为新 head，旧 AWAIT 不可回放 → 旧 Snapshot <code>SUPERSEDED</code> → <code>semantic_revision + 1</code> → 新 <code>FROZEN</code> → 把新 AWAIT 写为 current head → 新<code>RESULT_RECEIVED</code>再消费该 current head。</li>
+          <li><strong>多 Locale：</strong>Group manifest 只读确认；每个 member 必须绑定自己的 JSONL ledger，且其 current head 已是精确绑定该 Parent、A+ 与 bundled validators 的终态 PASS receipt。</li>
+          <li><strong>本 HTML 的边界：</strong>本页不创建、保存、编辑或追加 ledger；请查看 package coordinator 的 JSON 输出及指定 JSONL ledger。Receipt 不写入 Listing Bundle。</li>
+        </ol>
+        <p><strong>本地证据写入：</strong>ledger 是可审计的本地流程证据；<code>--record-receipt</code>是显式 local evidence write，不是 Amazon、Seller Central、ERP、网络或其他外部写入。</p>
+        <p><strong>与 Amazon backend/readback receipt 严格区分：</strong>coordination ledger/receipt 不是数字签名、不是可信时间戳、不是 Fact/Claim 或证据真实性证明、不是 Amazon 后台/平台回执、不是发布授权、不是 LIVE_MATCH/LIVE_PASS 证明。若对手可替换整个 ledger、Skill 或 validator，仍需外部可信存储或签名。</p>
+      </article>
+      {{CONTENT}}
+    </div>
+  </main>
+  <footer>Bundle SHA256：<code>{{BUNDLE_SHA}}</code> · Validator PASS不证明事实真实、规则当前、已获写权限或Amazon前台上线。</footer>
+</body>
+</html>

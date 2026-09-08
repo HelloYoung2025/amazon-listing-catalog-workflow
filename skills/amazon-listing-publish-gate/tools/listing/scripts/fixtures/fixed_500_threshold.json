@@ -1,0 +1,1 @@
+{"fixture_id":"fixed_500_threshold","mutations":[{"op":"set","path":"gates.native_text_min_chars","value":500}],"expected_code":"LST-METRIC-001"}

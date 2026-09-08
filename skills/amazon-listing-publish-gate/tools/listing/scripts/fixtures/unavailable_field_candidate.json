@@ -1,0 +1,1 @@
+{"fixture_id":"unavailable_field_candidate","mutations":[{"op":"set","path":"field_resolutions.0.status","value":"NOT_AVAILABLE"}],"expected_code":"LST-CANDIDATE-002"}

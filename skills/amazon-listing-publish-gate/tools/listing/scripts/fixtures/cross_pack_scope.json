@@ -1,0 +1,1 @@
+{"fixture_id":"cross_pack_scope","mutations":[{"op":"set","path":"field_candidates.0.application_scope.packs","value":["2PK"]}],"expected_code":"LST-SCOPE-007"}

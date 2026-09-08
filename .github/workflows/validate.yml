@@ -1,0 +1,26 @@
+name: Complete skill distribution
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Check complete source and dependency references
+        run: python scripts/check_package.py
+      - name: Installation and failure recovery tests
+        run: python -B -m unittest discover -s tests -v
+      - name: Existing Listing contract tests
+        run: python -B -m unittest discover -s skills/amazon-listing-publish-gate/tools/listing/scripts -q
+      - name: Existing A+ contract tests
+        run: python -B -m unittest discover -s skills/amazon-listing-publish-gate/tools/aplus/scripts -q
+      - name: Install outside the checkout and verify
+        run: |
+          python scripts/install.py --dest "$RUNNER_TEMP/amazon-skills"
+          python scripts/check_package.py --installed-root "$RUNNER_TEMP/amazon-skills"

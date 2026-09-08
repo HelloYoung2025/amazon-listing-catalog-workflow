@@ -1,0 +1,1035 @@
+{
+  "assets": [
+    {
+      "ai_rule_checked_at": "",
+      "ai_rule_source_ids": [],
+      "alt": "Black spatula shown by itself.",
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "applied_child_asins": [
+        "B0V11CHILD"
+      ],
+      "asset_role": "contents proof",
+      "canonical_assertion_ids": [
+        "CA-1"
+      ],
+      "claim_ids": [
+        "C-1"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "file": "black-spatula.jpg",
+      "generation_method": "real_photography",
+      "id": "A01",
+      "module_id": "M01",
+      "must_not_change": [
+        "Quantity",
+        "Color",
+        "Included item"
+      ],
+      "must_show": [
+        "Black spatula"
+      ],
+      "product_fidelity_evidence": [
+        "Physical sample comparison"
+      ],
+      "product_fidelity_owner": "Product",
+      "product_fidelity_status": "PASS",
+      "product_reference_files": [
+        "black-spatula.jpg"
+      ],
+      "qa_status": "PASS",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "synthetic_person": "no",
+      "variant_row_ids": [
+        "V-1"
+      ],
+      "visible_facts": [
+        "F-1"
+      ]
+    }
+  ],
+  "baseline": {
+    "alt_snapshot_ref": "",
+    "application_state_ref": "",
+    "asset_snapshot_ref": "",
+    "captured_at": "",
+    "concurrent_edit_status": "UNKNOWN",
+    "content_ids": [],
+    "copy_snapshot_ref": "",
+    "frontend_source_ids": [],
+    "id": "",
+    "owner": "",
+    "status": "NOT_FROZEN"
+  },
+  "canonical_assertions": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "claim_ids": [
+        "C-1"
+      ],
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "CA-1",
+      "locale_expressions": [
+        {
+          "claim_ids": [
+            "C-1"
+          ],
+          "fact_ids": [
+            "F-1"
+          ],
+          "locale": "en-US",
+          "text": "Includes one black spatula."
+        }
+      ],
+      "owner": "qa",
+      "publish_status": "PUBLISHABLE",
+      "statement": "Includes one black spatula.",
+      "variant_row_ids": [
+        "V-1"
+      ]
+    }
+  ],
+  "capability_snapshots": [
+    {
+      "account_scope": "fixture-account",
+      "available_module_types": [
+        "PREMIUM_IMAGE_TEXT"
+      ],
+      "backend_field_paths": [
+        "modules.M01.native_body"
+      ],
+      "checksum": "sha256:fixture",
+      "content_type": "PREMIUM_A_PLUS",
+      "eligibility_status": "PREMIUM",
+      "field_limits": {},
+      "id": "CAP-1",
+      "locale": "en-US",
+      "marketplace": "US",
+      "owner": "qa",
+      "retrieved_at": "2026-08-28T00:00:00Z",
+      "source_ids": [
+        "SRC-CAPABILITY"
+      ],
+      "status": "CURRENT"
+    }
+  ],
+  "carriers": [
+    {
+      "answer_unit_ids": [
+        "ANSWER-1"
+      ],
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "asset_ids": [],
+      "backend_field_path": "modules.M01.native_body",
+      "canonical_assertion_ids": [
+        "CA-1"
+      ],
+      "capability_snapshot_id": "CAP-1",
+      "carrier_type": "native_text",
+      "claim_ids": [
+        "C-1"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "coverage_role": "PRIMARY_NATIVE_ANSWER",
+      "decision_requirement_ids": [
+        "DR-1"
+      ],
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "CARRIER-1",
+      "mobile_behavior": "Native text remains readable.",
+      "module_id": "M01",
+      "owner": "qa",
+      "qa_status": "PASS",
+      "variant_row_ids": [
+        "V-1"
+      ]
+    }
+  ],
+  "category_adapter": {
+    "evidence_probes": [
+      "Inspect the scoped product evidence."
+    ],
+    "id": "generic",
+    "investigation_prompts": [
+      "Verify the included item."
+    ],
+    "owner": "qa",
+    "qa_checks": [
+      "Answer and image match the selected child."
+    ],
+    "return_risks": [
+      "Wrong included-item expectation."
+    ],
+    "status": "PARENT_BOUND"
+  },
+  "change_set": [],
+  "claims": [
+    {
+      "consumer_facing": true,
+      "content_status": "FINAL_CANDIDATE",
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "C-1",
+      "owner": "qa",
+      "publish_status": "PUBLISHABLE",
+      "risk_type": "ordinary",
+      "scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "text": "Includes one black spatula."
+    }
+  ],
+  "competitor_insights": [],
+  "voc_insights": [],
+  "component_result": {
+    "gap_atom_ids": [],
+    "open_delta_request_ids": [],
+    "owner": "qa",
+    "page_pass_implied": false,
+    "publication_authorized": false,
+    "status": "COMPONENT_PASS"
+  },
+  "conflicts": [],
+  "coverage_summary": {
+    "gap_atom_ids": [],
+    "gap_requirement_ids": [],
+    "p0_atoms_pass": 1,
+    "p0_atoms_required": 1,
+    "p0_pass": 1,
+    "p0_required": 1,
+    "status": "PASS"
+  },
+  "decision_answer_units": [
+    {
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "buyer_question": "What is included?",
+      "canonical_assertion_ids": [
+        "CA-1"
+      ],
+      "claim_ids": [
+        "C-1"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "early_disclosure_required": false,
+      "fact_ids": [
+        "F-1"
+      ],
+      "id": "ANSWER-1",
+      "module_id": "M01",
+      "native_field_path": "modules.M01.native_body",
+      "owner": "qa",
+      "primary_carrier_id": "CARRIER-1",
+      "priority": "P0",
+      "qa_status": "PASS",
+      "requirement_atom_id": "ATOM-1",
+      "requirement_id": "DR-1",
+      "text": "Includes one black spatula.",
+      "variant_row_id": "V-1"
+    }
+  ],
+  "decision_denominator_snapshot": {
+    "atoms": [
+      {
+        "id": "ATOM-1",
+        "locale": "en-US",
+        "marketplace": "US",
+        "requirement_id": "DR-1",
+        "variant_row_id": "V-1"
+      }
+    ],
+    "checksum": "sha256:f3b887710162073692b650fefd24753d455200e118f53bb19c881ecc5ce1f0ec",
+    "frozen_at": "2026-08-28T01:05:00Z",
+    "requirement_ids": [
+      "DR-1"
+    ],
+    "source": "PARENT_HANDOFF",
+    "source_hash": "sha256:fe38dc3ef32dcb65960b79d8e979ca69c36926901a4667013400a031d7a63df1",
+    "status": "FROZEN",
+    "variant_row_ids": [
+      "V-1"
+    ]
+  },
+  "decision_map": {
+    "dimensions": [
+      {
+        "answer": "Buyer selecting the included item.",
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "core_user",
+        "source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "status": "SUPPORTED"
+      }
+    ],
+    "owner": "qa",
+    "requirements": [
+      {
+        "application_scope": {
+          "child_asins": [
+            "B0V11CHILD"
+          ],
+          "colors": [
+            "Black"
+          ],
+          "packs": [
+            "1PK"
+          ],
+          "parent_asins": [
+            "B0V11PARNT"
+          ],
+          "sizes": [
+            "M"
+          ]
+        },
+        "assigned_surface": "enriched_content",
+        "buyer_question": "What is included?",
+        "claim_ids": [
+          "C-1"
+        ],
+        "early_disclosure_required": false,
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "DR-1",
+        "native_answer_required": true,
+        "owner": "qa",
+        "priority": "P0",
+        "status": "READY",
+        "upstream_primary_carrier_ref": ""
+      }
+    ],
+    "status": "SUPPORTED"
+  },
+  "delta_evidence_requests": [],
+  "discovery": {
+    "closure": {
+      "closed_at": "",
+      "owner": "qa",
+      "reason": "Frozen parent discovery is authoritative.",
+      "status": "NOT_REQUIRED_WITH_REASON"
+    },
+    "distillations": [],
+    "evidence_actions": [],
+    "evidence_pass": {
+      "observations": [
+        "Bound to frozen parent evidence."
+      ],
+      "owner": "qa",
+      "source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "status": "COMPLETE"
+    },
+    "interview_rounds": [],
+    "mode": "parent_bound",
+    "stage_gates": [
+      {
+        "closed_at": "2026-08-28T01:00:00+08:00",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "STAGE-RECONNAISSANCE",
+        "owner": "qa",
+        "reason": "Embedded A+ consumes the frozen parent result rather than repeating it.",
+        "record_refs": [
+          "PARENT_HANDOFF"
+        ],
+        "result": "The frozen parent handoff supplies this governed stage.",
+        "stage": "RECONNAISSANCE",
+        "status": "NOT_REQUIRED_WITH_REASON"
+      },
+      {
+        "closed_at": "2026-08-28T01:01:00+08:00",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "STAGE-PRODUCT_TRUTH",
+        "owner": "qa",
+        "reason": "Embedded A+ consumes the frozen parent result rather than repeating it.",
+        "record_refs": [
+          "PARENT_HANDOFF"
+        ],
+        "result": "The frozen parent handoff supplies this governed stage.",
+        "stage": "PRODUCT_TRUTH",
+        "status": "NOT_REQUIRED_WITH_REASON"
+      },
+      {
+        "closed_at": "2026-08-28T01:02:00+08:00",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "STAGE-ROUND_2",
+        "owner": "qa",
+        "reason": "Embedded A+ consumes the frozen parent result rather than repeating it.",
+        "record_refs": [
+          "PARENT_HANDOFF"
+        ],
+        "result": "The frozen parent handoff supplies this governed stage.",
+        "stage": "ROUND_2",
+        "status": "NOT_REQUIRED_WITH_REASON"
+      },
+      {
+        "closed_at": "2026-08-28T01:03:00+08:00",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "STAGE-PRODUCT_INTENT_BRIEF",
+        "owner": "qa",
+        "reason": "Embedded A+ consumes the frozen parent result rather than repeating it.",
+        "record_refs": [
+          "PARENT_HANDOFF"
+        ],
+        "result": "The frozen parent handoff supplies this governed stage.",
+        "stage": "PRODUCT_INTENT_BRIEF",
+        "status": "NOT_REQUIRED_WITH_REASON"
+      },
+      {
+        "closed_at": "2026-08-28T01:04:00+08:00",
+        "evidence_source_ids": [
+          "SRC-PRODUCT"
+        ],
+        "id": "STAGE-ONE_BET",
+        "owner": "qa",
+        "reason": "Embedded A+ consumes the frozen parent result rather than repeating it.",
+        "record_refs": [
+          "PARENT_HANDOFF"
+        ],
+        "result": "The frozen parent handoff supplies this governed stage.",
+        "stage": "ONE_BET",
+        "status": "NOT_REQUIRED_WITH_REASON"
+      }
+    ]
+  },
+  "enriched_content_handoff": {
+    "application_scope": {
+      "child_asins": [
+        "B0V11CHILD"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "packs": [
+        "1PK"
+      ],
+      "parent_asins": [
+        "B0V11PARNT"
+      ],
+      "sizes": [
+        "M"
+      ]
+    },
+    "blocked_claim_ids": [],
+    "canonical_assertion_ids": [
+      "CA-1"
+    ],
+    "capability_snapshot_ids": [],
+    "checksum": "sha256:fcbfa7a1ca15b6e0db57be92fcd468e2d90c84825b3d5f095d68639a16c1eb92",
+    "claim_ids": [
+      "C-1"
+    ],
+    "conflict_ids": [],
+    "contract_version": "1.1",
+    "created_at": "2026-08-28T02:00:00Z",
+    "decision_denominator_hash": "sha256:fe38dc3ef32dcb65960b79d8e979ca69c36926901a4667013400a031d7a63df1",
+    "decision_requirements": [
+      {
+        "application_scope": {
+          "child_asins": [
+            "B0V11CHILD"
+          ],
+          "colors": [
+            "Black"
+          ],
+          "packs": [
+            "1PK"
+          ],
+          "parent_asins": [
+            "B0V11PARNT"
+          ],
+          "sizes": [
+            "M"
+          ]
+        },
+        "assigned_surface": "enriched_content",
+        "buyer_question": "What is included?",
+        "claim_ids": [
+          "C-1"
+        ],
+        "early_disclosure_required": false,
+        "fact_ids": [
+          "F-1"
+        ],
+        "id": "DR-1",
+        "native_answer_required": true,
+        "owner": "qa",
+        "priority": "P0",
+        "status": "READY",
+        "upstream_primary_carrier_ref": ""
+      }
+    ],
+    "discovery_closure_hash": "sha256:881adc07502a49b20a12e1dcf68a2b0e31775cf47f6638bb5a7422c24ad63ddc",
+    "fact_ids": [
+      "F-1"
+    ],
+    "lineage_registry": [],
+    "locale": "en-US",
+    "marketplace": "US",
+    "maximum_output": "preflight_package",
+    "owner": "qa",
+    "parent_bundle_sha256": "sha256:bc252a5a18a5f4e131a78e2f3233bde90516826eba84ebc366ceb19506c2ccc2",
+    "parent_project_id": "LISTING-V11",
+    "predecessor_snapshot_id": "",
+    "product_type": "KITCHEN_TOOL",
+    "prohibited_actions": [
+      "modify_parent_truth",
+      "expand_application_scope",
+      "online_submission"
+    ],
+    "ptd_inventory_hash": "sha256:eaa2c155b020ff5c3d8bb1111301603487d6a8039e92f62fcfbf47f81c646a60",
+    "refreeze_reason": "",
+    "requested_content_types": [
+      "PREMIUM_A_PLUS"
+    ],
+    "requirement_atoms": [
+      {
+        "id": "ATOM-1",
+        "locale": "en-US",
+        "marketplace": "US",
+        "requirement_id": "DR-1",
+        "variant_row_id": "V-1"
+      }
+    ],
+    "semantic_revision": 1,
+    "snapshot_id": "HO-5995c285b4d62ed110a9",
+    "source_ids": [
+      "SRC-PRODUCT"
+    ],
+    "status": "FROZEN",
+    "variant_row_ids": [
+      "V-1"
+    ]
+  },
+  "experiments": [],
+  "facts": [
+    {
+      "evidence_strength": "E3",
+      "evidence_type": "DOCUMENTED_SPEC",
+      "fact_class": "PHYSICAL_PRODUCT",
+      "id": "F-1",
+      "observed_at": "2026-08-28",
+      "owner": "qa",
+      "proving_source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "publish_status": "PUBLISHABLE",
+      "scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "statement": "One black spatula is included."
+    }
+  ],
+  "gates": [
+    {
+      "evidence": [
+        "G0-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G0",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G1-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G1",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G2-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G2",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G3-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G3",
+      "owner": "Independent QA",
+      "status": "PASS"
+    },
+    {
+      "evidence": [
+        "G4-evidence"
+      ],
+      "failure_action": "Stop and correct.",
+      "id": "G4",
+      "owner": "Independent QA",
+      "status": "PASS"
+    }
+  ],
+  "live_readback": [],
+  "modules": [
+    {
+      "acceptance_tests": [
+        "Contents match the selected child."
+      ],
+      "application_scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "applied_child_asins": [
+        "B0V11CHILD"
+      ],
+      "claim_ids": [
+        "C-1"
+      ],
+      "content_status": "FINAL_CANDIDATE",
+      "decision_priority": "P0",
+      "decision_question": "What is included?",
+      "eligibility_source_ids": [
+        "SRC-CAPABILITY"
+      ],
+      "evidence_gate_status": "PASS",
+      "experiment_eligible": true,
+      "fact_ids": [
+        "F-1"
+      ],
+      "hold_claim_ids": [],
+      "id": "M01",
+      "image_brief": "Show the real device and included contents.",
+      "mobile_plan": "Keep product and native headline visible.",
+      "module_type": "PREMIUM_IMAGE_TEXT",
+      "module_type_verified_at": "2026-08-28",
+      "native_body": "Includes one black spatula.",
+      "native_headline": "Know What Is Included",
+      "on_image_text": "",
+      "owner": "qa",
+      "prohibited_claims": [
+        "No untested absolute performance"
+      ],
+      "qa_status": "PASS",
+      "visible_proof_fact_ids": [
+        "F-1"
+      ],
+      "wrong_user_or_use": "Do not infer additional accessories."
+    }
+  ],
+  "platform_limits": {
+    "alt_max_chars": 100,
+    "available_module_types": [
+      "PREMIUM_IMAGE_TEXT"
+    ],
+    "basic_max_modules": 5,
+    "content_type_eligibility": "PREMIUM",
+    "last_verified_at": "2026-08-28T00:00:00Z",
+    "premium_max_modules": 7,
+    "source_id": "SRC-ALT",
+    "source_ids": [
+      "SRC-ALT"
+    ]
+  },
+  "positioning": {
+    "category": "Kitchen tool",
+    "core_audience": "Scoped buyers",
+    "high_value_situation": "Before purchase",
+    "important_limit_claim_ids": [],
+    "job": "Choose the correct item",
+    "mechanism_fact_ids": [
+      "F-1"
+    ],
+    "owner": "Strategy",
+    "primary_benefit": "Clear included item",
+    "statement": "The selected child includes one black spatula.",
+    "status": "SUPPORTED"
+  },
+  "project": {
+    "conclusion": "PASS",
+    "conditional_draft": {
+      "blocked_outputs": [],
+      "blocker_ids": [],
+      "maximum_work": "full_production",
+      "status": "CLEARED"
+    },
+    "focal_identity": {
+      "identifier": "B0V11CHILD",
+      "identifier_type": "asin",
+      "identity_status": "VERIFIED_CHILD",
+      "provisional_parent": "B0V11PARNT",
+      "verification_source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "verified_focal_child": "B0V11CHILD"
+    },
+    "locale": "en-US",
+    "marketplace": "US",
+    "mode": "rebuild",
+    "snapshot_date": "2026-08-28",
+    "status": "ACTIVE",
+    "target_type": "live_asin",
+    "title": "Paired A+ v1.3 integration fixture",
+    "write_scope": "read_only"
+  },
+  "publish_authorization": {
+    "allowed_actions": [],
+    "authorization_id": "",
+    "authorized_at": "",
+    "authorized_by": "",
+    "change_set_ids": [],
+    "child_asins": [],
+    "content_ids": [],
+    "expires_at": "",
+    "locales": [],
+    "marketplaces": [],
+    "prohibited_actions": [],
+    "source_ids": [],
+    "status": "NOT_AUTHORIZED",
+    "systems": []
+  },
+  "rollback": {
+    "baseline_id": "",
+    "method": "",
+    "protected_p0_fact_ids": [],
+    "responsible_owner": "",
+    "source_ids": [],
+    "status": "NOT_READY",
+    "trigger_conditions": [],
+    "verification_steps": []
+  },
+  "schema_version": "1.3",
+  "scope": {
+    "colors": [
+      "Black"
+    ],
+    "intended_child_asins": [
+      "B0V11CHILD"
+    ],
+    "locales": [
+      "en-US"
+    ],
+    "marketplaces": [
+      "US"
+    ],
+    "other_dimensions": {
+      "style": [
+        "N/A"
+      ]
+    },
+    "packs": [
+      "1PK"
+    ],
+    "parent_asins": [
+      "B0V11PARNT"
+    ],
+    "sizes_or_capacities": [
+      "M"
+    ],
+    "source_ids": [
+      "SRC-PRODUCT"
+    ],
+    "status": "FROZEN"
+  },
+  "sources": [
+    {
+      "block_reason": "",
+      "can_establish": [
+        "included item"
+      ],
+      "cannot_establish": [
+        "performance"
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-PRODUCT",
+      "observed_at": "2026-08-28T00:00:00Z",
+      "owner": "qa",
+      "path_or_url": "/evidence/package.png",
+      "scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "source_type": "DOCUMENTED_SPEC",
+      "time_window": "point_in_time",
+      "timezone": "UTC"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "A+ module and field availability"
+      ],
+      "cannot_establish": [
+        "product fact"
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-CAPABILITY",
+      "observed_at": "2026-08-28T00:00:00Z",
+      "owner": "qa",
+      "path_or_url": "/evidence/aplus-capability.png",
+      "scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "source_type": "BACKEND_OBSERVED",
+      "time_window": "point_in_time",
+      "timezone": "UTC"
+    },
+    {
+      "block_reason": "",
+      "can_establish": [
+        "A+ field and module rules"
+      ],
+      "cannot_establish": [
+        "product fact"
+      ],
+      "fetch_status": "ok",
+      "id": "SRC-ALT",
+      "observed_at": "2026-08-28T00:00:00Z",
+      "owner": "qa",
+      "path_or_url": "https://developer-docs.amazon.com/sp-api/docs/a-plus-content-examples",
+      "scope": {
+        "child_asins": [
+          "B0V11CHILD"
+        ],
+        "colors": [
+          "Black"
+        ],
+        "locale": "en-US",
+        "marketplace": "US",
+        "other_variants": {
+          "style": [
+            "N/A"
+          ]
+        },
+        "packs": [
+          "1PK"
+        ],
+        "parent_asin": "B0V11PARNT",
+        "sizes_or_capacities": [
+          "M"
+        ]
+      },
+      "source_type": "OFFICIAL_PLATFORM_RULE",
+      "time_window": "point_in_time",
+      "timezone": "UTC"
+    }
+  ],
+  "variants": [
+    {
+      "aplus_content_id": "",
+      "brand_story_id": "",
+      "child_asin": "B0V11CHILD",
+      "color": "Black",
+      "id": "V-1",
+      "locale": "en-US",
+      "marketplace": "US",
+      "other_variant": "N/A",
+      "owner": "qa",
+      "pack": "1PK",
+      "parent_asin": "B0V11PARNT",
+      "size_or_capacity": "M",
+      "source_ids": [
+        "SRC-PRODUCT"
+      ],
+      "status": "VERIFIED"
+    }
+  ],
+  "workflow_context": {
+    "accepted_at": "2026-08-28T02:05:00Z",
+    "accepted_by": "A+ qa",
+    "accepted_handoff_snapshot_id": "HO-5995c285b4d62ed110a9",
+    "execution_boundary": "read_only",
+    "mode": "embedded",
+    "parent_bundle_ref": "../../../amazon-listing-catalog-workflow/scripts/integration_fixtures/listing-v1.1-delegated-handoff-pass.json"
+  }
+}

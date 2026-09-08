@@ -1,0 +1,10 @@
+[
+  {"name": "zero_p0_denominator", "expected_code": "L11-DENOM-004"},
+  {"name": "answer_absent_from_candidate", "expected_code": "L11-ANSWER-005"},
+  {"name": "owner_only_publishable_fact", "expected_code": "L11-FACT-005"},
+  {"name": "stale_rule_self_declared_current", "expected_code": "L11-RULE-006"},
+  {"name": "triggered_conditional_open", "expected_code": "L11-PTD-008"},
+  {"name": "fake_item_subtitle", "expected_code": "L11-FIELD-001"},
+  {"name": "p0_unknown_without_evidence_action", "expected_code": "L11-DISCOVERY-010"},
+  {"name": "result_received_without_coordinator", "expected_code": "L11-PROJECT-006"}
+]

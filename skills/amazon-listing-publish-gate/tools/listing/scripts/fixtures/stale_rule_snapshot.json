@@ -1,0 +1,1 @@
+{"fixture_id":"stale_rule_snapshot","mutations":[{"op":"set","path":"rule_snapshots.0.status","value":"STALE"}],"expected_code":"LST-SCHEMA-004"}

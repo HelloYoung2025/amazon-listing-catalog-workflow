@@ -1,0 +1,1 @@
+{"fixture_id":"p0_image_only","mutations":[{"op":"set","path":"surface_assignments.0.primary_carrier_kind","value":"IMAGE_TEXT"}],"expected_code":"LST-COVERAGE-009"}

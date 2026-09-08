@@ -1,0 +1,19 @@
+{
+  "contract_version": "listing-locale-group/1.1",
+  "group_id": "REPLACE-WITH-GROUP-ID",
+  "marketplace": "US",
+  "members": [
+    {
+      "locale": "en-US",
+      "parent_bundle": "en-US/listing-v1.1.json",
+      "aplus_bundle": "en-US/aplus-v1.3.json",
+      "coordination_ledger": "en-US/coordination-receipts.jsonl"
+    },
+    {
+      "locale": "fr-FR",
+      "parent_bundle": "fr-FR/listing-v1.1.json",
+      "aplus_bundle": "fr-FR/aplus-v1.3.json",
+      "coordination_ledger": "fr-FR/coordination-receipts.jsonl"
+    }
+  ]
+}
